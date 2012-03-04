@@ -2,8 +2,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Organic Web Design</title>
+<title>Discover New Idea</title>
 <link href="Pages/styles/Comman.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('em ').hide();
+
+        $('.image_wrapper img').hover(function () {
+            $(this).siblings('em').show();
+            $(this).siblings('em').animate({ top: '0px', left: '5px', bottom: '5px' }, 'slow');
+        }, function () {
+            $(this).siblings('em').animate({ top: '-60px' }, 'slow');
+        });
+//        $('#imgAboutMe').hover(function () {
+//            $(this).siblings('em').show();
+//            $(this).siblings('em').animate({ top: '0px', left: '5px', bottom: '5px' }, 'slow');
+//        }, function () {
+//            $(this).siblings('em').animate({ top: '-60px' }, 'slow');
+//        });
+//        $('#imgBlog').hover(function () {
+//            $(this).siblings('em').show();
+//            $(this).siblings('em').animate({ top: '0px', left: '5px', bottom: '5px' }, 'slow');
+//        }, function () {
+//            $(this).siblings('em').animate({ top: '-60px' }, 'slow');
+//        });
+    }); 
+
+</script>
 </head>
 <body>
 	<div id="container">
@@ -11,22 +37,23 @@
 		<!-- Main Image -->
 		<div id="main_image">
 			<img src="Pages/images/Header.jpg" width="860" height="150" alt="Main Image" />
-			<div id="frame_image_top"></div><div id="frame_image_bottom"></div>
+			<!--<div id="frame_image_top"></div><div id="frame_image_bottom"></div>-->
 			<hr />
 		</div>
 		<!-- The 3 Banner -->
 		<div id="banner_wrapper">
 			<div class="banner">
-				<h2><a class="bannerheadre"  href="index.html"> Home </a></h2>
-				<div class="image_wrapper"><img src="Pages/images/Home.jpg" width="228" height="150" alt="image: Homes" /><span></span></div>
+            <h2></h2>
+				
+				<div class="image_wrapper"><a href="index.html"><em> HOME </em><img id="imgHome" src="Pages/images/Home.jpg" width="228" height="150" alt="image: Home" /></a><span></span></div>
 			</div>
 			<div class="banner">
-				<h2><a class="bannerheadre" href="Pages/About_Me.html">About Me</a></h2>
-				<div class="image_wrapper"><img src="Pages/images/AboutMe.gif" width="228" height="150" alt="image: About Me" /><span></span></div>
+				<h2></h2>
+				<div class="image_wrapper"><a class="bannerheadre" href="Pages/About_Me.html"><em> ABOUT ME </em><img id="imgAboutMe" src="Pages/images/AboutMe.gif" width="228" height="150" alt="image: About Me" /></a><span></span></div>
 			</div>
 			<div class="banner banner_last">
-				<h2><a class="bannerheadre" href="Pages/BlogList.html"> Blog</a></h2>
-				<div class="image_wrapper"><img src="Pages/images/Blog.jpg" width="228" height="150" alt="image: Blog" /><span></span></div>
+				<h2> </h2>
+				<div class="image_wrapper"><a class="bannerheadre" href="Pages/BlogList.html"><em> BLOG </em><img id="imgBlog" src="Pages/images/Blog.jpg" width="228" height="150" alt="image: Blog" /></a><span></span></div>
 			</div>
 			<hr />
 		</div>
@@ -69,11 +96,10 @@
 
                                         
                     
-                </div>
-			</div>
-   <span class="bottom_rounded"></span><span class="bottom_pic"></span>
-			<hr />
-		</div>
+            </div>
+    	</div>
+   </div>
+</div>
 </body>
 </html>
 
