@@ -4,6 +4,32 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Discover New Idea</title>
 <link href="styles/Comman.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('em ').hide();
+
+        $('.image_wrapper img').hover(function () {
+            $(this).siblings('em').show();
+            $(this).siblings('em').animate({ top: '0px', left: '5px', bottom: '5px' }, 'slow');
+        }, function () {
+            $(this).siblings('em').animate({ top: '-60px' }, 'slow');
+        });
+//        $('#imgAboutMe').hover(function () {
+//            $(this).siblings('em').show();
+//            $(this).siblings('em').animate({ top: '0px', left: '5px', bottom: '5px' }, 'slow');
+//        }, function () {
+//            $(this).siblings('em').animate({ top: '-60px' }, 'slow');
+//        });
+//        $('#imgBlog').hover(function () {
+//            $(this).siblings('em').show();
+//            $(this).siblings('em').animate({ top: '0px', left: '5px', bottom: '5px' }, 'slow');
+//        }, function () {
+//            $(this).siblings('em').animate({ top: '-60px' }, 'slow');
+//        });
+    }); 
+
+</script>
 </head>
 <body>
 	<div id="container">
@@ -18,16 +44,17 @@
 		<!-- The 3 Banner -->
 		<div id="banner_wrapper">
 			<div class="banner">
-				<h2><a class="bannerheadre"  href="../index.html" style="top:50px" > Home </a></h2>
-				<div class="image_wrapper"><img src="images/Home.jpg" width="228" height="150" alt="image: Home" /><span></span></div>
+            <h2></h2>
+				
+				<div class="image_wrapper"><a href="../index.html"><em> HOME </em><img id="imgHome" src="images/Home.jpg" width="228" height="150" alt="image: Home" /></a><span></span></div>
 			</div>
 			<div class="banner">
-				<h2><a class="bannerheadre" href="About_Me.html">About Me</a></h2>
-				<div class="image_wrapper"><img src="images/AboutMe.gif" width="228" height="150" alt="image: About Me" /><span></span></div>
+				<h2></h2>
+				<div class="image_wrapper"><a class="bannerheadre" href="About_Me.html"><em> ABOUT ME </em><img id="imgAboutMe" src="images/AboutMe.gif" width="228" height="150" alt="image: About Me" /></a><span></span></div>
 			</div>
 			<div class="banner banner_last">
-				<h2><a class="bannerheadre" href="BlogList.html"> Blog</a></h2>
-				<div class="image_wrapper"><img src="images/Blog.jpg" width="228" height="150" alt="image: Blog" /><span></span></div>
+				<h2> </h2>
+				<div class="image_wrapper"><a class="bannerheadre" href="BlogList.html"><em> BLOG </em><img id="imgBlog" src="images/Blog.jpg" width="228" height="150" alt="image: Blog" /></a><span></span></div>
 			</div>
 			<hr />
 		</div>
@@ -139,27 +166,26 @@
 				
                 </div></br>
                 <div style="margin:20px" id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'neharai'; // required: replace example with your forum shortname
+                       <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'neharai'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">&nbsp;&gt;&nbsp;&nbsp;blog comments powered by <span class="logo-disqus">Disqus</span></a>
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function () {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">&nbsp;&gt;&nbsp;&nbsp;blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
-          
+              
 			</div>
            
         </div>
          
-			<span class="bottom_rounded"></span><span class="bottom_pic"></span>
-			<hr />
+			
 		</div>
 
 </body>
