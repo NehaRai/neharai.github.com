@@ -7,9 +7,8 @@
   <body>
       <h3>Hello every one Neha here </h3>
     <div> 
-	
+	<a href="Pages/AboutMe.html">About Me</a>
      <ul>
-	<li><a href="Pages/AboutMe.html">About Me</a></li>
         <li><a href="#">Older Blog Post</a></li>
 	<ul>
 		<li><a href="Pages/CommandLine.html">Command Line for beginners</a></li>
